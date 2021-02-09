@@ -1,8 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500&display=swap');
+
+html {
+  font-size: 10px;
+}
 
 body {
   box-sizing: border-box;
-  font-family: 'Abril Fatface', cursive;
+  font-family: var(--main-font);
 }
 
 *,
@@ -15,4 +23,38 @@ body {
 
 nav {
   font-size: 1.8rem;
+}
+
+.wrapper {
+  max-width: 118rem;
+  margin: auto;
+}
+
+.marginTop {
+  margin-top: 8rem;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--color-font-black);
+}
+
+li {
+  list-style: none;
+}
+
+:root {
+  /* --main-font: 'Sawarabi Mincho', sans-serif; */
+  --sub-font: 'Nanum Myeongjo', serif;
+  --nav-font: 'Poppins', sans-serif;
+  --main-font: 'Prata', serif;
+  /* --main-font: 'Public Sans', sans-serif; */
+  --color-font-black: #111;
+  --color-font-red: #d0021b;
+  --bg-offer: #ffe974;
+  --bg-nav: #0787ca;
 }

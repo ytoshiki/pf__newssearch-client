@@ -1,8 +1,9 @@
 import Head from 'next/head';
 import Link from 'next/link';
 export const siteTitle = 'Next.js Sample Website';
-import Navbar from './Navbar';
+import Navbar from '../Navbar';
 import Footer from './Footer';
+import Navigation from './Navigation';
 
 const Layout: React.FC = ({ children }) => {
   return (
@@ -14,7 +15,7 @@ const Layout: React.FC = ({ children }) => {
         <meta name='og:title' content={siteTitle} />
         <meta name='twitter:card' content='summary_large_image' />
       </Head>
-      <Navbar />
+      <Navigation />
 
       {children}
       <Footer />

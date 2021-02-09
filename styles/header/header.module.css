@@ -1,0 +1,38 @@
+.header {
+  text-align: center;
+}
+
+.header__logo {
+  font-size: 5rem;
+  font-weight: bold;
+  letter-spacing: 0.5rem;
+}
+
+.header__logo a {
+  text-decoration: none;
+}
+
+.header__logoSmall {
+  font-size: 1.4rem;
+}
+
+.header__nav {
+  margin-top: 3rem;
+}
+
+.header__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+
+.header__item {
+  text-transform: uppercase;
+  margin: 0 1.2rem;
+  font-size: 1.7rem;
+}
+
+.header__item a {
+  text-decoration: none;
+}

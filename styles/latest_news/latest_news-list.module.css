@@ -1,0 +1,146 @@
+.latestNews {
+  display: flex;
+  padding: 0 5rem 10rem 5rem;
+}
+
+.primaryLatestNews {
+  flex: 1;
+}
+
+.primaryLatestNews__inner {
+  height: 100%;
+}
+
+.primaryLatestNews__img {
+  margin-left: 4rem;
+  position: relative;
+  height: 100%;
+}
+
+.primaryLatestNews__img img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.primaryLatestNews__info {
+  position: absolute;
+  bottom: 0;
+  left: -4rem;
+  background: #fff;
+  max-width: 58rem;
+  padding: 0.75rem 1.7rem;
+}
+
+.primaryLatestNews__info p {
+  font-size: 2.4rem;
+}
+
+.topLatestNews {
+  flex-basis: 34rem;
+  margin-left: 6rem;
+  border-top: solid 1px black;
+  padding-top: 1rem;
+}
+
+.topLatestNews h2 {
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 1.9rem;
+}
+
+.topLatestNews__list {
+  padding-left: 4rem;
+  list-style: none;
+  margin-top: 2rem;
+}
+
+.topLatestNews__item {
+  margin-bottom: 1.75rem;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+}
+
+.topLatestNews__category {
+  color: var(--color-font-red);
+}
+
+.topLatestNews__item a {
+  text-decoration: none;
+  color: #282828;
+}
+.topLatestNews__item a:hover {
+  border-bottom: 1px solid #282828;
+}
+
+.subLatestNews {
+  padding-bottom: 1.3rem;
+  border-top: 1.5rem solid rgba(17, 17, 17, 0.877);
+  border-bottom: 1px solid rgba(17, 17, 17, 0.877);
+}
+
+.subLatestNews__title {
+  font-size: 5rem;
+  line-height: 1;
+}
+
+.subLatestNews__title a {
+  text-decoration: none;
+  line-height: 1;
+}
+
+.subLatestNews__title a:hover {
+  text-decoration: underline;
+}
+
+.restLatestNews {
+  width: 100%;
+  margin-top: 8rem;
+}
+
+.restLatestNews__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.restLatestNews__item {
+  width: 30%;
+  margin-right: 5.6rem;
+  margin-bottom: 5rem;
+}
+
+.restLatestNews__item a {
+  text-decoration: none;
+}
+
+.restLatestNews__item:hover .restLatestNews__img {
+  opacity: 0.8;
+}
+
+.restLatestNews__item:hover a {
+  text-decoration: underline;
+}
+
+.restLatestNews__itemContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.restLatestNews__itemContent h3 {
+  margin: 0.75rem 0;
+  font-size: 2rem;
+  line-height: 2.4rem;
+}
+
+.restLatestNews__img {
+  position: relative;
+  height: 25rem;
+}
+
+.restLatestNews__img img {
+  min-height: 100% !important;
+  object-fit: cover;
+}
+
+.restLatestNews__item:nth-child(3n + 3) {
+  margin-right: 0;
+}

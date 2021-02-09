@@ -1,0 +1,28 @@
+.footer {
+  max-width: 118rem;
+  margin: 8rem auto 0 auto;
+  font-family: var(--nav-font);
+  padding-bottom: 4rem;
+}
+
+.footer__navigation {
+  max-width: 60rem;
+  margin: auto;
+}
+
+.footer__list {
+  display: flex;
+  text-transform: uppercase;
+  justify-content: space-between;
+}
+
+.footer__list li {
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.footer__copyright {
+  text-align: center;
+  margin-top: 4rem;
+  letter-spacing: 1.5px;
+}
