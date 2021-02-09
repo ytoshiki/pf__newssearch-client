@@ -5,7 +5,10 @@
 .header__logo {
   font-size: 5rem;
   font-weight: bold;
+  line-height: 5rem;
   letter-spacing: 0.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
 }
 
 .header__logo a {
@@ -14,6 +17,7 @@
 
 .header__logoSmall {
   font-size: 1.4rem;
+  vertical-align: top;
 }
 
 .header__nav {

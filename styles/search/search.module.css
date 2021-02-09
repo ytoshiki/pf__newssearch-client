@@ -16,7 +16,8 @@
   margin: 4rem 0 3rem 0;
   text-transform: uppercase;
   font-size: 1.8rem;
-  font-weight: lighter;
+  font-weight: 300;
+  font-family: var(--nav-font);
 }
 
 .search__form {
@@ -57,6 +58,8 @@
   padding-left: 1rem;
   outline: none;
   border: 1px solid rgb(236, 232, 232);
+  font-family: inherit;
+  font-size: 1.6rem;
 }
 
 .search__formButton {
@@ -68,5 +71,46 @@
 }
 
 .search__result {
-  min-height: 40rem;
+  min-height: 40vh;
+}
+
+.search__resultItem {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  padding: 2.3rem 0;
+  border-bottom: 1px solid rgb(245, 244, 244);
+}
+
+.search__resultInfo {
+  flex: 1;
+}
+
+.search__resultImg {
+  flex-basis: 30%;
+  margin-left: 5rem;
+}
+
+.sarch__resultAuthor {
+  color: var(--color-font-red);
+  font-size: 1.3rem;
+  display: inline-block;
+  padding-bottom: 1.25rem;
+}
+
+.sarch__resultTitle {
+  font-size: 2.6rem;
+  line-height: 3.2rem;
+  padding-bottom: 1.5rem;
+}
+
+.sarch__resultParagraph {
+  font-size: 1.6rem;
+  line-height: 2.3rem;
+  padding-bottom: 2rem;
+}
+
+.sarch__resultDate {
+  font-family: var(--nav-font);
+  font-size: 1.3rem;
 }

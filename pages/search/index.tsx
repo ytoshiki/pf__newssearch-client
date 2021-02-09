@@ -13,7 +13,7 @@ const Search: React.FC<SearchProps> = () => {
       </Head>
       <Layout>
         <Header />
-        <SearchWrapper />
+        <SearchWrapper searchResult={null} loading={null} />
       </Layout>
     </>
   );
