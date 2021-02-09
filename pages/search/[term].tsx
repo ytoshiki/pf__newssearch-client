@@ -26,7 +26,7 @@ const SearchResult: React.FC<SearchResultProps> = () => {
 
         const url = `${endpoint}language=en&keywords=${term}&apiKey=${process.env.NEXT_PUBLIC_CURRENT_API_KEY}`;
 
-        console.log(process.env.NEXT_PUBLIC_CURRENT_API_KEY);
+        console.log(process.env.NEXT_PUBLIC_API_KEY);
 
         const req = new Request(url);
         const response: { status: string; news: NewsItem[] } = await new Promise((resolve, reject) => {
