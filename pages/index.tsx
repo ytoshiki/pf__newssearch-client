@@ -4,6 +4,7 @@ import styles from '../styles/Home.module.css';
 import LatestNewsWrapper, { NewsItem } from '../components/LatestNews/LatestNewsWrapper';
 import Header from '../components/Header/Header';
 import Offer from '../components/Offer/Offer';
+import FadeInWhenVisible from '../components/Animation/FadeInWhenVisible';
 
 interface HomeProps {
   latestNews: {
@@ -33,7 +34,9 @@ const Home: React.FC<HomeProps> = ({ latestNews }) => {
         <div className={styles.home}>
           <Header />
           <LatestNewsWrapper primaryNews={primaryNews} topNews={topNews} subNews={subNews} restNews={restNews} />
-          <Offer />
+          <FadeInWhenVisible>
+            <Offer />
+          </FadeInWhenVisible>
         </div>
       </Layout>
     </>

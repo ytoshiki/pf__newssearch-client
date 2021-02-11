@@ -1,4 +1,6 @@
 import styles from '../../styles/latest_news/latest_news-list.module.css';
+import FadeInWhenVisible from '../Animation/FadeInWhenVisible';
+import NewsAnimation from '../Animation/News';
 import PrimaryNewsList from './primaryNewsList';
 import RestNewsList from './RestNewsList';
 import SubNewsList from './SubNewsList';
@@ -31,7 +33,9 @@ const LatestNewsWrapper: React.FC<LatestNewsWrapperProps> = ({ primaryNews, topN
           <TopNewsList topNews={topNews} />
         </div>
         <SubNewsList subNews={subNews} />
-        <RestNewsList restNews={restNews} />
+        <NewsAnimation>
+          <RestNewsList restNews={restNews} />
+        </NewsAnimation>
       </div>
     </div>
   );

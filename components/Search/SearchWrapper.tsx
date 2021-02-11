@@ -2,6 +2,7 @@ import styles from '../../styles/search/search.module.css';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import { NewsItem } from '../LatestNews/LatestNewsWrapper';
+import NewsAnimation from '../Animation/News';
 
 export interface SearchWrapperProps {
   searchResult: null | string | NewsItem[];

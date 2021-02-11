@@ -1,6 +1,7 @@
 import { NewsItem } from '../LatestNews/LatestNewsWrapper';
 import styles from '../../styles/categories/category.module.css';
 import { formatDate, formatAuthor } from '../../helper/formatter';
+import NewsAnimation from '../Animation/News';
 
 export interface CategoryItemProps {
   newsItem: NewsItem;
