@@ -47,3 +47,14 @@
   line-height: 3rem;
   padding: 0 2rem;
 }
+
+@media all and (max-width: 600px) {
+  .navigation__item {
+    display: none;
+  }
+
+  .navigation__item:last-child {
+    margin-left: 0;
+    display: block;
+  }
+}

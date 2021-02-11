@@ -3,6 +3,8 @@
   margin: 8rem auto 0 auto;
   font-family: var(--nav-font);
   padding-bottom: 4rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .footer__navigation {
@@ -25,4 +27,28 @@
   text-align: center;
   margin-top: 4rem;
   letter-spacing: 1.5px;
+}
+
+@media all and (max-width: 420px) {
+  .footer {
+    margin: 4rem auto 0 auto;
+  }
+
+  .footer__list {
+    display: flex;
+    text-transform: uppercase;
+    justify-content: none;
+    flex-wrap: wrap;
+  }
+
+  .footer__list li {
+    flex-basis: 50%;
+    margin-bottom: 1.3rem;
+  }
+
+  .footer__copyright {
+    text-align: center;
+    margin-top: 4rem;
+    letter-spacing: 1.5px;
+  }
 }

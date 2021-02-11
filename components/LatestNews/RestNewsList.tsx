@@ -12,7 +12,7 @@ const RestNewsList: React.FC<RestNewsListProps> = ({ restNews }) => {
       <ul className={styles.restLatestNews__list}>
         {restNews.map((news) => {
           if (news.image !== 'None') {
-            return <RestNewsItem news={news} />;
+            return <RestNewsItem news={news} key={news.id} />;
           }
         })}
       </ul>

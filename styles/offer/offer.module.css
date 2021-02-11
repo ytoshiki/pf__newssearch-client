@@ -45,3 +45,35 @@
 .offer__content small {
   display: block;
 }
+
+@media all and (max-width: 600px) {
+  .offer__catch {
+    padding-left: 3rem;
+    font-size: 1.7rem;
+
+    line-height: 2.5rem;
+  }
+}
+
+@media all and (max-width: 400px) {
+  .offer__inner {
+    flex-direction: column;
+  }
+
+  .offer__img {
+    display: none;
+  }
+
+  .offer__content {
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .offer__content p {
+    margin-top: 1rem;
+  }
+
+  .offer__content small {
+    display: none;
+  }
+}

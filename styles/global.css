@@ -143,3 +143,9 @@ li {
     transform: scale3D(0, 0, 1);
   }
 }
+
+@media all and (max-width: 850px) {
+  .marginTop {
+    margin-top: 2rem;
+  }
+}

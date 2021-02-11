@@ -76,6 +76,7 @@
   padding-bottom: 1.3rem;
   border-top: 1.5rem solid rgba(17, 17, 17, 0.877);
   border-bottom: 1px solid rgba(17, 17, 17, 0.877);
+  margin: 0 2rem;
 }
 
 .subLatestNews__title {
@@ -94,6 +95,7 @@
 
 .restLatestNews {
   width: 100%;
+  padding: 0 2rem;
   margin-top: 8rem;
 }
 
@@ -106,6 +108,102 @@
   width: 30%;
   margin-right: 5.6rem;
   margin-bottom: 5rem;
+}
+
+@media all and (max-width: 1180px) {
+  /* .restLatestNews__list {
+    justify-content: space-between;
+  } */
+
+  .restLatestNews__item {
+    width: 50%;
+    padding: 0 1rem;
+    margin-right: 0;
+    margin-bottom: 5rem;
+  }
+}
+
+@media all and (max-width: 850px) {
+  /* .restLatestNews__list {
+    justify-content: space-between;
+  } */
+
+  .latestNews {
+    flex-direction: column;
+    padding: 1rem 2rem 5rem 2rem;
+  }
+
+  .primaryLatestNews__img {
+    margin-left: 0;
+  }
+
+  .primaryLatestNews__info p {
+    font-size: 2rem;
+  }
+
+  .primaryLatestNews__info {
+    position: relative;
+    left: 0;
+    background: #fff;
+    width: 100%;
+    padding: 0.75rem 0;
+  }
+
+  .topLatestNews {
+    flex: 1;
+    margin-left: 0;
+    border-top: solid 1px black;
+    padding-top: 3rem;
+  }
+
+  .topLatestNews h2 {
+    font-size: 1.6rem;
+  }
+
+  .topLatestNews__list {
+    padding-left: 3rem;
+    margin-top: 1rem;
+  }
+
+  .topLatestNews__item {
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+
+  .subLatestNews__title {
+    font-size: 3rem;
+  }
+
+  .restLatestNews__item {
+    width: 50%;
+    padding: 0 1rem;
+    margin-right: 0;
+    margin-bottom: 3rem;
+  }
+}
+
+@media all and (max-width: 550px) {
+  .restLatestNews__img {
+    height: 15rem !important;
+  }
+
+  .restLatestNews__item h3 {
+    font-size: 1.6rem !important;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .restLatestNews__item {
+    width: 100%;
+
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+
+  .restLatestNews__img {
+    height: 18rem !important;
+  }
 }
 
 .restLatestNews__item a {
@@ -137,7 +235,7 @@
 }
 
 .restLatestNews__img img {
-  min-height: 100% !important;
+  height: 100% !important;
   object-fit: cover;
 }
 

@@ -1,5 +1,6 @@
 .header {
   text-align: center;
+  margin-top: 1rem;
 }
 
 .header__logo {
@@ -39,4 +40,42 @@
 
 .header__item a {
   text-decoration: none;
+}
+
+@media all and (max-width: 600px) {
+  .header {
+    margin-top: 1rem;
+  }
+
+  .header__logo {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+
+  .header__nav {
+    margin-top: 2rem;
+  }
+
+  .header__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+  }
+
+  .header__item {
+    text-transform: uppercase;
+    margin: 0 0.5rem;
+    font-size: 1.4rem;
+  }
+
+  .header__item a {
+    text-decoration: none;
+  }
+}
+
+@media all and (max-width: 400px) {
+  .header__list {
+    display: none;
+  }
 }
