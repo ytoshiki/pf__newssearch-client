@@ -54,9 +54,7 @@ const SearchWrapper: React.FC<SearchWrapperProps> = ({ searchResult, loading }) 
             <small className={styles.sarch__resultDate}>{formatDate(news.published)}</small>
           </div>
           <div className={styles.search__resultImg}>
-            <div>
-              <img src={news.image} alt='' />
-            </div>
+            <img src={news.image} alt='' />
           </div>
         </div>
       );
