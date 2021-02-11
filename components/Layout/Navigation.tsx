@@ -8,12 +8,12 @@ const Navigation: React.FC<NavigationProps> = () => {
     <nav className={styles.navigation}>
       <ul className={styles.navigation__list}>
         <li className={styles.navigation__item}>
-          <Link href='/signin'>
+          <Link href='/register/signin'>
             <a>Sign In</a>
           </Link>
         </li>
         <li className={styles.navigation__item}>
-          <Link href='/subscribe'>
+          <Link href='/register/subscribe'>
             <a className={styles.navigation__subscribe}>Subscribe</a>
           </Link>
         </li>

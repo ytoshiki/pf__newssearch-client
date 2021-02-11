@@ -2,6 +2,7 @@
   max-width: 80rem;
   max-height: 24rem;
   margin: 4rem auto 0 auto;
+  padding: 2rem 0;
   background: var(--bg-offer);
 }
 
@@ -26,4 +27,21 @@
   font-size: 2rem;
 
   line-height: 3rem;
+}
+
+.offer__content {
+  padding-right: 2rem;
+}
+
+.offer__content a {
+  padding: 0.75rem 2rem;
+  background: #282828;
+  color: #fff;
+  display: inline-block;
+  margin: 1rem 0;
+  text-decoration: none;
+}
+
+.offer__content small {
+  display: block;
 }

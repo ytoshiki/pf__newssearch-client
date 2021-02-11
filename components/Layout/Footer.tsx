@@ -14,7 +14,7 @@ const Footer: React.FC<FooterProps> = () => {
           <li>terms</li>
         </ul>
       </nav>
-      <p className={styles.footer__copyright}>The News is an unofficial news app.&#174;The News. All rights reserved.</p>
+      <p className={styles.footer__copyright}>The Connect is an unofficial news app.&#174;The Connect. All rights reserved.</p>
     </footer>
   );
 };

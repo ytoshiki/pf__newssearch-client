@@ -1,19 +1,36 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
+import Head from 'next/head';
+import CategoryHeader from '../../components/Categories/CategoryHeader';
+import CategoryList from '../../components/Categories/CategoryList';
+import Header from '../../components/Header/Header';
 import { NewsItem } from '../../components/LatestNews/LatestNewsWrapper';
+import Layout from '../../components/Layout/Layout';
 
 export interface CategoryProps {
   news: NewsItem[];
+  category: string;
 }
 
-const Category: React.FC<CategoryProps> = ({ news }) => {
-  const newsDisplay = news.slice(0, 10);
+const Category: React.FC<CategoryProps> = ({ news, category }) => {
+  let newsDisplay = news.filter((newsItem) => {
+    return newsItem.image !== 'None';
+  });
+
+  if (newsDisplay.length < 8) {
+    newsDisplay = news;
+  }
+
   return (
-    <div>
-      {newsDisplay &&
-        newsDisplay.map((article) => {
-          return <div key={article.id}>{article.title}</div>;
-        })}
-    </div>
+    <>
+      <Head>
+        <title>The Connect | {category}</title>
+      </Head>
+      <Layout>
+        <Header />
+        <CategoryHeader category={category} />
+        <CategoryList newsDisplay={newsDisplay} />
+      </Layout>
+    </>
   );
 };
 
@@ -24,17 +41,10 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const response = await fetch(endpoint);
   const data = await response.json();
 
-  // if (data.status !== 'ok') {
-  //   return {
-  //     props: {
-  //       news: []
-  //     }
-  //   };
-  // }
-
   return {
     props: {
-      news: data.news
+      news: data.news,
+      category: category
     }
   };
 };
