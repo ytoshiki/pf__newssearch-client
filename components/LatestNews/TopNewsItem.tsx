@@ -18,7 +18,13 @@ const TopNewsItem: React.FC<TopNewsItemProps> = ({ newsItem }) => {
     <li className={styles.topLatestNews__item}>
       {newsItem.category && <small className={styles.topLatestNews__category}>{newsItem.category[0]}</small>}
       <br />
-      {newsItem.url ? <a href={newsItem.url}>{newsItem.title}</a> : newsItem.title}
+      {newsItem.url ? (
+        <a href={newsItem.url} target='_blank'>
+          {newsItem.title}
+        </a>
+      ) : (
+        newsItem.title
+      )}
     </li>
   );
 };

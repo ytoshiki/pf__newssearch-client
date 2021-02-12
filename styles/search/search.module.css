@@ -5,6 +5,10 @@
   margin-top: 3rem;
 }
 
+.search__a {
+  text-decoration: none;
+}
+
 .search__inner {
   display: flex;
   align-items: center;
@@ -78,11 +82,14 @@
 }
 
 .search__resultItem {
-  display: flex;
   width: 80%;
   margin: auto;
   padding: 2.3rem 0;
   border-bottom: 1px solid rgb(245, 244, 244);
+}
+
+.search__resultInner {
+  display: flex;
 }
 
 .search__resultInfo {
@@ -128,10 +135,13 @@
 
 @media all and (max-width: 830px) {
   .search__resultItem {
-    flex-direction: column;
     width: 100%;
     padding: 0 2rem;
     margin-bottom: 4rem;
+  }
+
+  .search__resultInner {
+    flex-direction: column;
   }
 
   .search__resultInfo {

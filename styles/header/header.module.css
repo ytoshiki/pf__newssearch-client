@@ -5,9 +5,9 @@
 
 .header__logo {
   font-size: 5rem;
-  font-weight: bold;
+  font-weight: 400;
   line-height: 5rem;
-  letter-spacing: 0.5rem;
+  letter-spacing: 0.3rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid var(--border);
 }
@@ -23,6 +23,7 @@
 
 .header__nav {
   margin-top: 3rem;
+  font-family: var(--sub-font);
 }
 
 .header__list {
@@ -30,6 +31,7 @@
   align-items: center;
   justify-content: center;
   list-style: none;
+  transition: all 0.2s ease;
 }
 
 .header__item {
@@ -40,6 +42,18 @@
 
 .header__item a {
   text-decoration: none;
+  font-weight: 500;
+}
+
+.openNav {
+  margin-top: 1rem;
+  margin-right: 2rem;
+  justify-content: flex-end;
+  display: none;
+}
+
+.openNav img {
+  width: 3rem;
 }
 
 @media all and (max-width: 600px) {
@@ -76,6 +90,15 @@
 
 @media all and (max-width: 400px) {
   .header__list {
-    display: none;
+    flex-wrap: wrap;
+    justify-content: flex-start !important;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .header__item {
+    flex-basis: 50%;
+    margin: 0;
+    margin: 0.75rem 0;
   }
 }

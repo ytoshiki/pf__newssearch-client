@@ -19,7 +19,7 @@ const Navigation: React.FC<NavigationProps> = () => {
         </li>
         <li className={styles.navigation__item}>
           <Link href='/search'>
-            <a>
+            <a className={styles.navigation__search}>
               <div className={styles.navigation__img}>
                 <img src='/images/loupe.svg' alt='' />
               </div>

@@ -1,6 +1,7 @@
 .latestNews {
   display: flex;
   padding: 0 5rem 10rem 5rem;
+  font-family: var(--main-font);
 }
 
 .primaryLatestNews {
@@ -43,7 +44,8 @@
 }
 
 .topLatestNews h2 {
-  font-weight: 300;
+  font-weight: 400;
+  font-family: var(--sub-font);
   text-transform: uppercase;
   font-size: 1.9rem;
 }

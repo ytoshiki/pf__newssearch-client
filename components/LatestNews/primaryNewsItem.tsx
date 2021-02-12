@@ -7,7 +7,7 @@ export interface PrimaryNewsItemProps {
 
 const PrimaryNewsItem: React.FC<PrimaryNewsItemProps> = ({ newsItem }) => {
   return (
-    <a href={newsItem.url} key={newsItem.id}>
+    <a href={newsItem.url} key={newsItem.id} target='_blank'>
       <div className={styles.primaryLatestNews__inner}>
         <div className={styles.primaryLatestNews__img}>
           <img src={newsItem.image} alt='' />

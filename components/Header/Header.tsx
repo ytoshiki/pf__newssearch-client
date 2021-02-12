@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import styles from '../../styles/header/header.module.css';
+import { useEffect, useRef, useState } from 'react';
+import FadeInWhenVisible from '../Animation/FadeInWhenVisible';
 
 export interface HeaderProps {}
 
@@ -14,6 +16,7 @@ const Header: React.FC<HeaderProps> = () => {
             </a>
           </Link>
         </div>
+
         <nav className={styles.header__nav}>
           <ul className={styles.header__list}>
             <li className={styles.header__item}>

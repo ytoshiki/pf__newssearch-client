@@ -49,12 +49,35 @@
 }
 
 @media all and (max-width: 600px) {
+  .navigation__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 2rem;
+  }
+  .navigation__subscribe {
+    background: none;
+    border-radius: 0;
+    color: black;
+    display: block;
+    line-height: 1;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+  }
   .navigation__item {
-    display: none;
+    width: 50%;
+    margin: 0;
   }
 
   .navigation__item:last-child {
-    margin-left: 0;
-    display: block;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 2rem;
+  }
+
+  .navigation__search {
   }
 }

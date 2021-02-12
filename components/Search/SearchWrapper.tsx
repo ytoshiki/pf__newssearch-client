@@ -1,8 +1,8 @@
 import styles from '../../styles/search/search.module.css';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/router';
 import { NewsItem } from '../LatestNews/LatestNewsWrapper';
-import NewsAnimation from '../Animation/News';
+import { motion } from 'framer-motion';
 
 export interface SearchWrapperProps {
   searchResult: null | string | NewsItem[];
@@ -12,6 +12,17 @@ export interface SearchWrapperProps {
 const SearchWrapper: React.FC<SearchWrapperProps> = ({ searchResult, loading }) => {
   const [input, setInput] = useState('');
   const router = useRouter();
+
+  const [isFocused, setIsFocused] = useState(false);
+
+  const inputRef = useRef(null);
+
+  useEffect(() => {
+    if (!isFocused) {
+      inputRef.current.focus();
+      setIsFocused(true);
+    }
+  }, []);
 
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -46,17 +57,30 @@ const SearchWrapper: React.FC<SearchWrapperProps> = ({ searchResult, loading }) 
   } else if (Array.isArray(searchResult)) {
     displayResult = searchResult.map((news) => {
       return (
-        <div key={news.id} className={styles.search__resultItem}>
-          <div className={styles.search__resultInfo}>
-            <small className={styles.sarch__resultAuthor}>{formatAuthor(news.author)}</small>
-            <h2 className={styles.sarch__resultTitle}>{news.title}</h2>
-            <p className={styles.sarch__resultParagraph}>{news.description}</p>
-            <small className={styles.sarch__resultDate}>{formatDate(news.published)}</small>
-          </div>
-          <div className={styles.search__resultImg}>
-            <img src={news.image} alt='' />
-          </div>
-        </div>
+        <motion.div
+          key={news.id}
+          className={styles.search__resultItem}
+          whileHover={{
+            opacity: 0.7,
+            transition: {
+              duration: 0.2
+            }
+          }}
+        >
+          <a href={news.url} className={styles.search__a}>
+            <div className={styles.search__resultInner}>
+              <div className={styles.search__resultInfo}>
+                <small className={styles.sarch__resultAuthor}>{formatAuthor(news.author)}</small>
+                <h2 className={styles.sarch__resultTitle}>{news.title}</h2>
+                <p className={styles.sarch__resultParagraph}>{news.description}</p>
+                <small className={styles.sarch__resultDate}>{formatDate(news.published)}</small>
+              </div>
+              <div className={styles.search__resultImg}>
+                <img src={news.image} alt='' />
+              </div>
+            </div>
+          </a>
+        </motion.div>
       );
     });
   } else {
@@ -71,7 +95,7 @@ const SearchWrapper: React.FC<SearchWrapperProps> = ({ searchResult, loading }) 
         </div>
         <div className={styles.search__formWrapper}>
           <form onSubmit={onSubmit} className={styles.search__form}>
-            <input type='text' placeholder='Enter search terms' value={input} onChange={(e) => setInput(e.target.value)} />
+            <input type='text' placeholder='Enter search terms' value={input} onChange={(e) => setInput(e.target.value)} ref={inputRef} />
             <button className={styles.search__formButton}>Submit</button>
           </form>
         </div>
