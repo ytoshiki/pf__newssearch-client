@@ -1,11 +1,28 @@
 import Link from 'next/link';
 import styles from '../../styles/header/header.module.css';
-import { useEffect, useRef, useState } from 'react';
-import FadeInWhenVisible from '../Animation/FadeInWhenVisible';
+import { useRef, useState, useEffect } from 'react';
 
-export interface HeaderProps {}
+export interface HeaderProps {
+  availableCategories: null | string[];
+}
 
-const Header: React.FC<HeaderProps> = () => {
+const Header: React.FC<HeaderProps> = ({ availableCategories = null }) => {
+  const navRef = useRef(null);
+  const [isNavVisible, setIsNavVisible] = useState(false);
+
+  useEffect(() => {
+    console.log('called');
+    if (!isNavVisible) {
+      navRef.current.style.display = 'none';
+    } else {
+      navRef.current.style.display = 'flex';
+    }
+  }, [setIsNavVisible, isNavVisible]);
+
+  const displayCategories = () => {
+    setIsNavVisible(!isNavVisible);
+  };
+
   return (
     <header className={styles.header}>
       <div className='wrapper'>
@@ -44,6 +61,24 @@ const Header: React.FC<HeaderProps> = () => {
                 <a>art</a>
               </Link>
             </li>
+          </ul>
+        </nav>
+
+        <nav className={styles.hiddenNav}>
+          <div className={styles.openNav} onClick={displayCategories}>
+            <img src='/images/down.svg' alt='' />
+          </div>
+          <ul ref={navRef} className={styles.hiddenList}>
+            {availableCategories &&
+              availableCategories.map((category, index) => {
+                return (
+                  <li key={index}>
+                    <Link href={`/categories/${category}`}>
+                      <a>{category}</a>
+                    </Link>
+                  </li>
+                );
+              })}
           </ul>
         </nav>
       </div>

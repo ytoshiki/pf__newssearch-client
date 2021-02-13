@@ -48,12 +48,36 @@
 .openNav {
   margin-top: 1rem;
   margin-right: 2rem;
+  display: flex;
   justify-content: flex-end;
-  display: none;
 }
 
 .openNav img {
   width: 3rem;
+}
+
+.hiddenNav {
+  position: relative;
+  z-index: 10;
+}
+
+.hiddenList {
+  position: absolute;
+  width: 100%;
+  max-width: 70rem;
+  right: 2rem;
+  background: white;
+  top: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
+
+.hiddenList li {
+  width: 20%;
+  margin: 0.4rem 0.5rem;
+  font-size: 1.3rem;
+  font-family: var(--sub-font);
 }
 
 @media all and (max-width: 600px) {

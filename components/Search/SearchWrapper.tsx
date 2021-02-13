@@ -3,41 +3,54 @@ import { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/router';
 import { NewsItem } from '../LatestNews/LatestNewsWrapper';
 import { motion } from 'framer-motion';
+import Select from 'react-select';
+import SearchForm from './SearchForm';
 
 export interface SearchWrapperProps {
   searchResult: null | string | NewsItem[];
   loading: boolean | null;
+  // languages: object;
 }
 
 const SearchWrapper: React.FC<SearchWrapperProps> = ({ searchResult, loading }) => {
-  const [input, setInput] = useState('');
-  const router = useRouter();
+  // const [input, setInput] = useState('');
+  // const [language, setLanguage] = useState('en');
+  // const router = useRouter();
 
-  const [isFocused, setIsFocused] = useState(false);
+  // const [isFocused, setIsFocused] = useState(false);
 
-  const inputRef = useRef(null);
+  // const inputRef = useRef(null);
 
-  useEffect(() => {
-    if (!isFocused) {
-      inputRef.current.focus();
-      setIsFocused(true);
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (!isFocused) {
+  //     inputRef.current.focus();
+  //     setIsFocused(true);
+  //   }
+  // }, []);
 
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  // const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  //   e.preventDefault();
 
-    if (!input) {
-      return;
-    }
+  //   if (!input) {
+  //     return;
+  //   }
 
-    const searchTerm = input.trim();
+  //   const searchTerm = input.trim();
 
-    setInput('');
-    return router.push(`/search/${searchTerm}`);
-  };
+  //   setInput('');
+  //   return router.push(`/search/${searchTerm}/${language}`);
+  // };
 
   let displayResult;
+
+  // const langOptions = Object.entries(languages);
+
+  // const options = langOptions.map((lan) => {
+  //   return {
+  //     value: lan[1],
+  //     label: lan[0]
+  //   };
+  // });
 
   const formatDate = (date: string): string => {
     const rowDate = date.split(' ');
@@ -51,6 +64,11 @@ const SearchWrapper: React.FC<SearchWrapperProps> = ({ searchResult, loading }) 
 
     return author;
   };
+
+  // const pickLang = (selectedOption: { value: string; label: string }) => {
+  //   console.log(selectedOption.value);
+  //   setLanguage(selectedOption.value);
+  // };
 
   if (searchResult === 'Not Found') {
     displayResult = <p className='notFound'>Not results.</p>;
@@ -94,10 +112,13 @@ const SearchWrapper: React.FC<SearchWrapperProps> = ({ searchResult, loading }) 
           <h1>Search Results</h1>
         </div>
         <div className={styles.search__formWrapper}>
-          <form onSubmit={onSubmit} className={styles.search__form}>
+          <SearchForm />
+          {/* <form onSubmit={onSubmit} className={styles.search__form}>
             <input type='text' placeholder='Enter search terms' value={input} onChange={(e) => setInput(e.target.value)} ref={inputRef} />
+            <br />
+            <Select instanceId={'langType'} options={options} onChange={pickLang} />
             <button className={styles.search__formButton}>Submit</button>
-          </form>
+          </form> */}
         </div>
         <div className={styles.search__result}>
           {loading && (

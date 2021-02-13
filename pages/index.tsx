@@ -17,9 +17,10 @@ interface HomeProps {
     category: string[];
     published: string;
   }[];
+  availableCategories: string[];
 }
 
-const Home: React.FC<HomeProps> = ({ latestNews }) => {
+const Home: React.FC<HomeProps> = ({ latestNews, availableCategories }) => {
   const primaryNews = latestNews.slice(1, 2);
   const topNews = latestNews.slice(2, 7);
   const subNews = latestNews.slice(7, 8);
@@ -32,7 +33,7 @@ const Home: React.FC<HomeProps> = ({ latestNews }) => {
       </Head>
       <Layout>
         <div className={styles.home}>
-          <Header />
+          <Header availableCategories={availableCategories} />
           <LatestNewsWrapper primaryNews={primaryNews} topNews={topNews} subNews={subNews} restNews={restNews} />
           <FadeInWhenVisible>
             <Offer />
@@ -60,6 +61,10 @@ export const getStaticProps = async () => {
     };
   }
 
+  const category_url = 'https://api.currentsapi.services/v1/available/categories';
+  const category_response = await fetch(category_url);
+  const category_data = await category_response.json();
+
   // const filteredData = data.news.filter((news: NewsItem) => {
   //   if (news.image === 'https://markets.ft.com/data/images/pulse' || news.image === 'None') {
   //     return false;
@@ -70,7 +75,8 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-      latestNews: data.news
+      latestNews: data.news,
+      availableCategories: category_data.categories
     }
   };
 };

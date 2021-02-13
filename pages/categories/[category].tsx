@@ -26,7 +26,7 @@ const Category: React.FC<CategoryProps> = ({ news, category }) => {
         <title>The Connect | {category}</title>
       </Head>
       <Layout>
-        <Header />
+        <Header availableCategories={null} />
         <CategoryHeader category={category} />
         <CategoryList newsDisplay={newsDisplay} />
       </Layout>
@@ -50,9 +50,13 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const categories = ['business', 'world', 'sports', 'lifestyle', 'art'];
+  const category_url = 'https://api.currentsapi.services/v1/available/categories';
+  const category_response = await fetch(category_url);
+  const category_data: {
+    categories: string[];
+  } = await category_response.json();
 
-  const paths = categories.map((category) => {
+  const paths = category_data.categories.map((category) => {
     return {
       params: {
         category: category

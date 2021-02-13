@@ -6,13 +6,15 @@ import SearchWrapper from '../../components/Search/SearchWrapper';
 export interface SearchProps {}
 
 const Search: React.FC<SearchProps> = () => {
+  console.log('hello');
   return (
     <>
       <Head>
         <title>The Connect | Search</title>
       </Head>
       <Layout>
-        <Header />
+        <Header availableCategories={null} />
+
         <SearchWrapper searchResult={null} loading={null} />
       </Layout>
     </>
@@ -20,3 +22,15 @@ const Search: React.FC<SearchProps> = () => {
 };
 
 export default Search;
+
+// export const getStaticProps: GetStaticProps = async () => {
+//   const url = 'https://api.currentsapi.services/v1/available/languages';
+//   const response = await fetch(url);
+//   const data = await response.json();
+
+//   return {
+//     props: {
+//       languages: data.languages
+//     }
+//   };
+// };
