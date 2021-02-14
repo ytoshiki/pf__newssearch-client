@@ -26,7 +26,7 @@ const Category: React.FC<CategoryProps> = ({ news, category }) => {
         <title>The Connect | {category}</title>
       </Head>
       <Layout>
-        <Header availableCategories={null} />
+        <Header />
         <CategoryHeader category={category} />
         <CategoryList newsDisplay={newsDisplay} />
       </Layout>

@@ -22,16 +22,3 @@ const Search: React.FC<SearchProps> = () => {
 };
 
 export default Search;
-
-// Runs in build time
-// export const getStaticProps = async () => {
-//   const category_url = 'https://api.currentsapi.services/v1/available/categories';
-//   const category_response = await fetch(category_url);
-//   const category_data = await category_response.json();
-
-//   return {
-//     props: {
-//       availableCategories: category_data.categories
-//     }
-//   };
-// };
