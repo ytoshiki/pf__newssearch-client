@@ -59,6 +59,7 @@ const SearchForm: React.FC<SearchFormProps> = () => {
     const searchTerm = input.trim();
 
     setInput('');
+
     return router.push(`/search/${searchTerm}/${language}`);
   };
 
@@ -89,11 +90,12 @@ const SearchForm: React.FC<SearchFormProps> = () => {
   };
   return (
     <form onSubmit={onSubmit} className={styles.search__form}>
-      <input type='text' placeholder='Enter search terms' value={input} onChange={(e) => setInput(e.target.value)} ref={inputRef} />
+      <input className={styles.search__formInput} type='text' placeholder='Enter search terms' value={input} onChange={(e) => setInput(e.target.value)} ref={inputRef} />
       <br />
-
-      {options && <Select instanceId={'langType'} options={options} onChange={pickLang} defaultValue={{ label: 'English', value: 'en' }} styles={customStyles} myFontSize='13px' />}
-      <button className={styles.search__formButton}>Search</button>
+      <div className={styles.search__formHidden}>
+        {options && <Select instanceId={'langType'} options={options} onChange={pickLang} defaultValue={{ label: 'English', value: 'en' }} styles={customStyles} myFontSize='13px' />}
+        <button className={styles.search__formButton}>Search</button>
+      </div>
     </form>
   );
 };

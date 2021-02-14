@@ -37,6 +37,7 @@
 .register__content h1 {
   text-transform: uppercase;
   font-size: 2.6rem;
+  text-align: 1;
   margin-bottom: 1.5rem;
   font-family: var(--nav-font);
 }
@@ -62,6 +63,7 @@
   width: 100%;
   font-size: 1.6rem;
   height: 5rem;
+  border-radius: 3px;
   font-family: inherit;
 }
 
@@ -69,11 +71,29 @@
   padding-left: 1.5rem;
 }
 
+.register__form input:focus {
+  outline: none;
+}
+
 .register__form input[type='button'] {
   margin-top: 3rem;
 
-  background: #282828;
+  background: #1a1a1a;
   color: #fff;
   outline: none;
   border: none;
+}
+
+@media all and (max-width: 500px) {
+  .register__form input[type='button'] {
+    margin-top: 2rem;
+  }
+
+  .register__content h1 {
+    font-size: 2.2rem;
+  }
+
+  .register__content span {
+    font-size: 1.4rem;
+  }
 }

@@ -13,7 +13,7 @@ const Search: React.FC<SearchProps> = () => {
         <title>The Connect | Search</title>
       </Head>
       <Layout>
-        <Header availableCategories={null} />
+        <Header />
 
         <SearchWrapper searchResult={null} loading={null} />
       </Layout>
@@ -23,14 +23,15 @@ const Search: React.FC<SearchProps> = () => {
 
 export default Search;
 
-// export const getStaticProps: GetStaticProps = async () => {
-//   const url = 'https://api.currentsapi.services/v1/available/languages';
-//   const response = await fetch(url);
-//   const data = await response.json();
+// Runs in build time
+// export const getStaticProps = async () => {
+//   const category_url = 'https://api.currentsapi.services/v1/available/categories';
+//   const category_response = await fetch(category_url);
+//   const category_data = await category_response.json();
 
 //   return {
 //     props: {
-//       languages: data.languages
+//       availableCategories: category_data.categories
 //     }
 //   };
 // };

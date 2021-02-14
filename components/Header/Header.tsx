@@ -1,12 +1,13 @@
 import Link from 'next/link';
 import styles from '../../styles/header/header.module.css';
 import { useRef, useState, useEffect } from 'react';
+import HiddenNav from './HiddenNav';
 
 export interface HeaderProps {
-  availableCategories: null | string[];
+  // availableCategories: null | string[];
 }
 
-const Header: React.FC<HeaderProps> = ({ availableCategories = null }) => {
+const Header: React.FC<HeaderProps> = () => {
   const navRef = useRef(null);
   const [isNavVisible, setIsNavVisible] = useState(false);
 
@@ -64,23 +65,7 @@ const Header: React.FC<HeaderProps> = ({ availableCategories = null }) => {
           </ul>
         </nav>
 
-        <nav className={styles.hiddenNav}>
-          <div className={styles.openNav} onClick={displayCategories}>
-            <img src='/images/down.svg' alt='' />
-          </div>
-          <ul ref={navRef} className={styles.hiddenList}>
-            {availableCategories &&
-              availableCategories.map((category, index) => {
-                return (
-                  <li key={index}>
-                    <Link href={`/categories/${category}`}>
-                      <a>{category}</a>
-                    </Link>
-                  </li>
-                );
-              })}
-          </ul>
-        </nav>
+        <HiddenNav displayCategories={displayCategories} forwardRef={navRef} />
       </div>
     </header>
   );

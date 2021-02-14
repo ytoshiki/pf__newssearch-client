@@ -67,10 +67,11 @@
   max-width: 70rem;
   right: 2rem;
   background: white;
-  top: 3rem;
+  top: 3.5rem;
   display: flex;
   flex-wrap: wrap;
   padding: 2rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .hiddenList li {
@@ -78,6 +79,15 @@
   margin: 0.4rem 0.5rem;
   font-size: 1.3rem;
   font-family: var(--sub-font);
+}
+
+.hiddenList li a {
+  text-decoration: none;
+  transition: ease all 0.2s;
+}
+
+.hiddenList li a:hover {
+  text-decoration: underline;
 }
 
 @media all and (max-width: 600px) {

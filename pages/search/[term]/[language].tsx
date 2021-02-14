@@ -77,7 +77,7 @@ const SearchResult: React.FC<SearchResultProps> = () => {
         <title>The Connect | Search</title>
       </Head>
       <Layout>
-        <Header availableCategories={null} />
+        <Header />
         <SearchWrapper searchResult={newsResult} loading={loading} />
       </Layout>
     </>
