@@ -229,6 +229,7 @@
 @media all and (max-width: 450px) {
   .search__form {
     display: block;
+    height: auto;
   }
 
   .search__formWrapper {
