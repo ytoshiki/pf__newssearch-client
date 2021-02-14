@@ -85,7 +85,7 @@ const SearchWrapper: React.FC<SearchWrapperProps> = ({ searchResult, loading }) 
             }
           }}
         >
-          <a href={news.url} className={styles.search__a}>
+          <a href={news.url} className={styles.search__a} target='_blank'>
             <div className={styles.search__resultInner}>
               <div className={styles.search__resultInfo}>
                 <small className={styles.sarch__resultAuthor}>{formatAuthor(news.author)}</small>
@@ -94,7 +94,7 @@ const SearchWrapper: React.FC<SearchWrapperProps> = ({ searchResult, loading }) 
                 <small className={styles.sarch__resultDate}>{formatDate(news.published)}</small>
               </div>
               <div className={styles.search__resultImg}>
-                <img src={news.image} alt='' />
+                <img src={news.image} alt={news.title} />
               </div>
             </div>
           </a>

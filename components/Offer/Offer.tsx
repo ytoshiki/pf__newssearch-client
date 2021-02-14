@@ -18,7 +18,7 @@ const Offer: React.FC<OfferProps> = () => {
         </p>
         <div className={styles.offer__img}></div>
         <div className={styles.offer__content}>
-          <p>Subscribe for full customization.</p>
+          <p>Subscribe for more news</p>
           <Link href='/register/subscribe'>
             <a>Subscribe</a>
           </Link>

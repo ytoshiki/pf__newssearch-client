@@ -32,7 +32,7 @@ const SearchResult: React.FC<SearchResultProps> = () => {
           setLoading(true);
           setTimeout(() => {
             return reject('Searching Time Out');
-          }, 5000);
+          }, 15000);
           fetch(req)
             .then((res) => {
               return resolve(res.json());

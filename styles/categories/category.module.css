@@ -14,32 +14,36 @@
   overflow: hidden;
   margin-top: 6rem;
   margin-bottom: 4rem;
+  max-width: 140rem;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
 }
 
 .category__header::before {
   content: ' ';
   position: absolute;
-  left: -50rem;
+  left: -100rem;
   top: 50%;
   background: rgb(246, 244, 244);
   height: 0.2rem;
-  width: 50rem;
+  width: 98rem;
   display: block;
 }
 
 .category__header::after {
   content: ' ';
   position: absolute;
-  right: -50rem;
+  right: -100rem;
   top: 50%;
   background: rgb(246, 244, 244);
   height: 0.2rem;
-  width: 50rem;
+  width: 98rem;
   display: block;
 }
 
 .category__listWrapper {
-  max-width: 118rem;
+  max-width: 140rem;
   margin: auto;
 }
 

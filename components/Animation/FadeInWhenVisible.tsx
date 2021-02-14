@@ -20,10 +20,10 @@ const FadeInWhenVisible: React.FC<FadeInWhenVisibleProps> = ({ children }) => {
       ref={ref}
       animate={controls}
       initial='hidden'
-      transition={{ duration: 0.7 }}
+      transition={{ duration: 0.7, delay: 0.4 }}
       variants={{
-        visible: { opacity: 1, scale: 1 },
-        hidden: { opacity: 0, scale: 0.3 }
+        visible: { opacity: 1 },
+        hidden: { opacity: 0 }
       }}
     >
       {children}

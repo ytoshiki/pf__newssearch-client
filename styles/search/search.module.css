@@ -1,5 +1,5 @@
 .search {
-  max-width: 118rem;
+  max-width: 140rem;
   margin: auto;
   overflow: hidden;
   margin-top: 3rem;
@@ -21,7 +21,7 @@
   text-transform: uppercase;
   font-size: 1.8rem;
   font-weight: 300;
-  font-family: var(--nav-font);
+  font-family: var(--main-font);
 }
 
 .search__form {
@@ -191,9 +191,10 @@
 
 @media all and (max-width: 600px) {
   .search__title {
-    margin: 3rem 0 3rem 0;
+    margin: 2rem 0 3rem 0;
     font-size: 1.5rem;
     display: inline-block;
+    font-weight: 300;
   }
 
   .search__form {
@@ -235,7 +236,7 @@
   .search__formWrapper {
     position: relative;
     width: 100%;
-    min-height: 30rem;
+    height: auto;
   }
 
   .search__formInput {

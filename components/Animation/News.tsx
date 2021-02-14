@@ -19,9 +19,9 @@ const NewsAnimation: React.FC<NewsAnimationProps> = ({ children }) => {
       ref={ref}
       animate={controls}
       initial='hidden'
-      transition={{ duration: 1 }}
+      transition={{ duration: 1, delay: 0.3 }}
       variants={{
-        visible: { opacity: 1, translateY: -10 },
+        visible: { opacity: 1, translateY: -20 },
         hidden: { opacity: 0, translateX: 0 }
       }}
     >

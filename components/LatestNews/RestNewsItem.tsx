@@ -28,7 +28,7 @@ const RestNewsItem: React.FC<RestNewsItemProps> = ({ news }) => {
       <a href={news.url} target='_blank'>
         <div className={styles.restLatestNews__itemContent}>
           <div className={styles.restLatestNews__img}>
-            <img src={news.image} alt='' />
+            <img src={news.image} alt={news.title} />
           </div>
           <div>
             <h3>{news.title}</h3>
