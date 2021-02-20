@@ -28,7 +28,7 @@ const Home: React.FC<HomeProps> = ({ latestNews }) => {
   return (
     <>
       <Head>
-        <title>INDEX</title>
+        <title>The Connect - World News and Articles</title>
       </Head>
       <Layout>
         <div className={styles.home}>

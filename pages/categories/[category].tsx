@@ -23,7 +23,7 @@ const Category: React.FC<CategoryProps> = ({ news, category }) => {
   return (
     <>
       <Head>
-        <title>The Connect | {category}</title>
+        <title>{category} - World News and Articles</title>
       </Head>
       <Layout>
         <Header />

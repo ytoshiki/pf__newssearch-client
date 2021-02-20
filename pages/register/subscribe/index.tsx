@@ -9,7 +9,7 @@ const Subscribe: React.FC<SubscribeProps> = () => {
   return (
     <>
       <Head>
-        <title>The Connect | Subscribe</title>
+        <title>Subscribe - World News and Articles</title>
       </Head>
       <RegisterHeader />
       <Form term='subscribe' />

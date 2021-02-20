@@ -9,7 +9,7 @@ const Search: React.FC<SearchProps> = () => {
   return (
     <>
       <Head>
-        <title>The Connect | Search</title>
+        <title>Search - World News and Articles</title>
       </Head>
       <Layout>
         <Header />

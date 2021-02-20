@@ -74,7 +74,7 @@ const SearchResult: React.FC<SearchResultProps> = () => {
   return (
     <>
       <Head>
-        <title>The Connect | Search</title>
+        <title>{term} - World News and Articles</title>
       </Head>
       <Layout>
         <Header />

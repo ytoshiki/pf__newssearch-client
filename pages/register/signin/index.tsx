@@ -9,7 +9,7 @@ const SignIn: React.FC<SignInProps> = () => {
   return (
     <>
       <Head>
-        <title>The Connect | Sign In</title>
+        <title>Sign In - World News and Articles</title>
       </Head>
       <RegisterHeader />
       <Form term='signin' />
