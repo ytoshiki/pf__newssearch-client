@@ -54,6 +54,7 @@
 
 .openNav img {
   width: 3rem;
+  display: block;
 }
 
 .hiddenNav {
@@ -67,7 +68,7 @@
   max-width: 70rem;
   right: 2rem;
   background: white;
-  top: 3.5rem;
+  top: 4.5rem;
   display: flex;
   flex-wrap: wrap;
   padding: 2rem;
@@ -96,7 +97,7 @@
   }
 
   .header__logo {
-    font-size: 3rem;
+    font-size: 3.8rem;
     line-height: 3rem;
   }
 
@@ -119,6 +120,10 @@
 
   .header__item a {
     text-decoration: none;
+  }
+
+  .openNav img {
+    width: 2.3rem;
   }
 }
 

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import styles from '../../styles/header/header.module.css';
-import { useRef, useState, useEffect } from 'react';
+import { useState } from 'react';
 import HiddenNav from './HiddenNav';
 
 export interface HeaderProps {
@@ -8,17 +8,7 @@ export interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = () => {
-  const navRef = useRef(null);
   const [isNavVisible, setIsNavVisible] = useState(false);
-
-  useEffect(() => {
-    console.log('called');
-    if (!isNavVisible) {
-      navRef.current.style.display = 'none';
-    } else {
-      navRef.current.style.display = 'flex';
-    }
-  }, [setIsNavVisible, isNavVisible]);
 
   const displayCategories = () => {
     setIsNavVisible(!isNavVisible);
@@ -65,7 +55,7 @@ const Header: React.FC<HeaderProps> = () => {
           </ul>
         </nav>
 
-        <HiddenNav displayCategories={displayCategories} forwardRef={navRef} />
+        <HiddenNav displayCategories={displayCategories} isNavVisible={isNavVisible} />
       </div>
     </header>
   );

@@ -77,7 +77,8 @@
 
 .register__form input[type='button'] {
   margin-top: 3rem;
-
+  border-collapse: separate;
+  border-radius: 0.3rem;
   background: #1a1a1a;
   color: #fff;
   outline: none;

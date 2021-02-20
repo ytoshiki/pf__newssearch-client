@@ -1,7 +1,10 @@
 import { NewsItem } from '../LatestNews/LatestNewsWrapper';
 import styles from '../../styles/categories/category.module.css';
 import { formatDate, formatAuthor } from '../../helper/formatter';
-import NewsAnimation from '../Animation/News';
+
+import { Img } from 'react-image';
+import ImageLoading from '../Loading/ImgLoading';
+import ImageError from '../Loading/ImgError';
 
 export interface CategoryItemProps {
   newsItem: NewsItem;
@@ -13,7 +16,8 @@ const CategoryItem: React.FC<CategoryItemProps> = ({ newsItem }) => {
       <a href={newsItem.url} target='_blank'>
         <div className={styles.category__news}>
           <div className={styles.category__img}>
-            <img src={newsItem.image} alt='' />
+            {/* <img  alt='' /> */}
+            <Img src={newsItem.image} alt={newsItem.title} loader={<ImageLoading />} unloader={<ImageError />} />
           </div>
           <div className={styles.category__newsInfo}>
             <small className={styles.category__newsDate}>{formatDate(newsItem.published)}</small>

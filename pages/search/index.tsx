@@ -6,7 +6,6 @@ import SearchWrapper from '../../components/Search/SearchWrapper';
 export interface SearchProps {}
 
 const Search: React.FC<SearchProps> = () => {
-  console.log('hello');
   return (
     <>
       <Head>
